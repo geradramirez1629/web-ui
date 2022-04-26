@@ -55,6 +55,9 @@ module.exports = new Vuex.Store({
             appMimeTypeRegistrationMap: new Map(),
             appFileTypeRegistrationMap: new Map(),
             appsInstalled: []
+        },
+        shortcuts: {
+            shortcutsMap: new Map()
         }
 	},
 
@@ -230,7 +233,11 @@ module.exports = new Vuex.Store({
         },
         SET_SANDBOXED_APPS(state, payload) {
             state.sandboxedApps.appsInstalled = payload;
-        }
+        },
+        //shortcuts
+        SET_SHORTCUTS(state, payload) {
+            state.shortcuts.shortcutsMap = payload;
+        },
 	},
 
 	// Async
