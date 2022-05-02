@@ -863,6 +863,7 @@ module.exports = {
         },
         closeAppInstallation() {
             this.showAppInstallation = false;
+            this.forceSharedRefreshWithUpdate++;
         },
         createThumbnail() {
             this.closeMenu();
